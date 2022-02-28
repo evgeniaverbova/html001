@@ -1,0 +1,42 @@
+.nav__list {
+  display: flex;
+}
+.nav__iteam{
+  position: relative;
+  &:hover{
+    .nav__link{
+      background-color: $blue;
+      text-decoration: none;
+    }
+    .subnav{
+      display: block;
+    }
+
+  }
+}
+.nav__link {
+  display: block;
+  font-size: 1.1rem;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.4rem;
+  transition: background-color 0.2 linear;
+  line-height: 1.2;
+ 
+  &.has-subnav {
+    position: relative;
+    padding-right: 3.5rem;
+    &:after {
+      content: "";
+      display: block;
+      border-style: solid;
+      border-width: 6px 5px 0px 5px;
+      border-color: $white transparent transparent transparent;
+      position: absolute;
+      top: 43%;
+      right: 1.35rem;
+      margin-top: 1px;
+    }
+  }
+}
